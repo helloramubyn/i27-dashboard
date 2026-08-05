@@ -4,7 +4,12 @@ on:
         - cron: '*/5 * * * *'
 jobs:
     schedule-job:
-      runs-on: ubuntu-latest
+      runs-on: ubuntu-latest # public runner .
       steps:
           - name: Print Schedule information
             run: echo "Using schedule event.."
+
+
+            # custom runners 
+            # public 
+
