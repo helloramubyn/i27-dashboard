@@ -1,0 +1,20 @@
+name: Path Ignore Workflow
+on:
+  push: 
+    paths-ignore:
+     - README.md
+     - docs/**
+jobs:
+   show-information:
+         name: Push Trigger information
+         runs-on : ubuntu-latest
+         steps:
+         - name: Show Trigger information
+           run: |
+              echo "Workflow triggered by Path Ignore Push Event"
+              echo "Deatils of my Path Filter workflow"
+              echo "Event Name is : ${{ github.event_name }}"
+              echo "Repository Name is : ${{ github.Repository }} "
+              echo "Branch Name is : ${{ github.ref_name }} "
+              
+            
