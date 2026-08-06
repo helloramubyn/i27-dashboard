@@ -9,6 +9,3 @@
 
 this is the update
 Today is Thursday
-
-Implemented
-Some code in feature branch
