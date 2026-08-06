@@ -13,5 +13,5 @@ jobs:
               echo "Source Branch : ${{ github.head_ref }}"
                echo "Target Branch : ${{ github.base_ref }}"
               echo "Event Name is : ${{ github.event_name }}"
-              echo "Repository Name is : ${{ github.Repository }} "
+              echo "Repository Name is : ${{ github.repository }} "
              
