@@ -1,2 +1,2 @@
 FROM ubuntu-latest
-LABEL ESPANA WC
+LABEL ESPANA WC 26

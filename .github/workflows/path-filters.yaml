@@ -6,7 +6,7 @@ on:
     paths:
     - 'src/**' # any file in src folder
     - 'pom.xml' # pom.xml change
-    - 'Dockerfile' # docker file change
+    - Dockerfile # docker file change
 
 jobs:
    show-information:
