@@ -1,2 +1,2 @@
 FROM ubuntu-latest
-LABEL ESPANA
+LABEL ESPANA WC
