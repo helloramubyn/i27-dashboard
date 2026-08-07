@@ -15,3 +15,5 @@ Some code in feature branch
 
 Updating read me today
 Testing again
+working to test pull request event - Succeeded
+working to test synchronize
