@@ -1,0 +1,15 @@
+name: Work FLow -2
+on:
+ workflow_run:
+  workflows: 
+  - Work FLow -1
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print information
+      run: |
+         echo "Triggered WF2 Info"
+         echo "Actor is ${{ github.actor }}"
+         echo "ccomit sha is ${{ github.sha }}"  
+         
