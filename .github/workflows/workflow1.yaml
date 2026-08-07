@@ -10,3 +10,8 @@ jobs:
          echo "Triggered Info"
          echo "Actor is ${{ github.actor }}"
          echo "ccomit sha is ${{ github.sha }}"  
+
+    - name: Failure Step
+      run: |
+         echo "Info"
+         exit 1      
