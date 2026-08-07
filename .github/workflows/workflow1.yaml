@@ -8,5 +8,5 @@ jobs:
     - name: Print information
       run: |
          echo "Triggered Info"
-         echo "Actor is {{ $github.actor}}"
-         echo "ccomit sha is {{ $github.sha}}"  
+         echo "Actor is ${{ github.actor }}"
+         echo "ccomit sha is ${{ github.sha }}"  
