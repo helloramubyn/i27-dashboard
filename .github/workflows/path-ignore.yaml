@@ -2,7 +2,7 @@ name: Path Ignore Workflow
 on:
   push: 
     paths-ignore:
-     - README.md
+     - 'README.md'
 jobs:
    show-information:
          name: Push Trigger information1-1
