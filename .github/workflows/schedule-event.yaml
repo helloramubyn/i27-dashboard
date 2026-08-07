@@ -1,0 +1,10 @@
+name: Schedule Event
+on:
+ Schedule:
+  - cron: '*/2 * * * *'
+jobs:
+  schedule-job:
+    runs-on: ubuntu-latest  
+    steps:
+    - name: Print Schedule Info
+      run: echo "Schedule Event Workflow"
