@@ -1,0 +1,12 @@
+name: Work FLow -1
+on:
+ workflow_dispatch:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print information
+      run: |
+         echo "Triggered Info"
+         echo "Actor is {{ $github.actor}}"
+         echo "ccomit sha is {{ $github.sha}}"  
