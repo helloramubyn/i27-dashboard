@@ -12,3 +12,5 @@ Today is Thursday
 
 Implemented
 Some code in feature branch
+
+Updating read me today
