@@ -1,6 +1,6 @@
 name: Schedule Event
 on:
- Schedule:
+ schedule:
   - cron: '*/2 * * * *'
 jobs:
   schedule-job:
