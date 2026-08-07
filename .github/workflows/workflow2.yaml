@@ -12,5 +12,5 @@ jobs:
          echo "Triggered WF2 Info"
          echo "Actor is ${{ github.actor }}"
          echo "ccomit sha is ${{ github.sha }}"
-         echo " Date time is ${{ guthub.Date }} , ${{ github.time }}"  
+         echo " Date time is ${{ github.Date }} , ${{ github.time }}"  
          
