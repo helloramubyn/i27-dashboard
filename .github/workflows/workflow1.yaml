@@ -1,4 +1,4 @@
-name: Work FLow -1
+name: InitialWF
 on:
  workflow_dispatch:
 jobs:

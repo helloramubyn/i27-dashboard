@@ -1,16 +1,16 @@
-name: Work FLow -2
+name: FinalWF
 on:
  workflow_run:
   workflows: 
-  - Work FLow -1
+  - InitialWF
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
     - name: Print information
       run: |
-         echo "Triggered WF2 Info"
+         echo "Triggered FinalWF Info"
          echo "Actor is ${{ github.actor }}"
-         echo "ccomit sha is ${{ github.sha }}"
+         echo "comit sha is ${{ github.sha }}"
          echo " Date time is ${{ github.Date }} , ${{ github.time }}"  
          
