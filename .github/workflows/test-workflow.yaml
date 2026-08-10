@@ -15,5 +15,5 @@ jobs:
         ls -R
     - name: Print Repo Name
       run: |
-        echo " Repo Name is : https://github.com/${{ github.reository }}.git"
+        echo " Repo Name is : https://github.com/${{ github.repository }}.git"
       
