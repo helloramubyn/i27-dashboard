@@ -12,8 +12,8 @@ jobs:
     steps:
     - name: Print information
       run: |
-         echo "Triggered FinalWF Info"
+         echo "Triggered from FinalWF Info"
          echo "Actor is ${{ github.actor }}"
          echo "comit sha is ${{ github.sha }}"
-         echo " Date time is ${{ github.Date }} , ${{ github.time }}"  
+ 
          
