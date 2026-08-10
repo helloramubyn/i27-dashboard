@@ -14,3 +14,7 @@ jobs:
          ls -la
          echo "====================="
          pwd
+      - name: verify java Package
+        run: |
+         echo "Validating Java version"
+         java -version  
