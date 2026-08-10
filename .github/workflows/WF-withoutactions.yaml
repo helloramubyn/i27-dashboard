@@ -1,0 +1,21 @@
+name: Without Actions 
+on: 
+  workflow_dispatch
+jobs:
+   manual-setup:
+      runs-on: ubuntu-latest  
+      steps:
+      - name: Manually Cloning the repo
+        run: |
+         echo " cloning the rep"
+         git clone https://github.com/${{ github.repository }}.git .
+      - name: Give me the list of files above
+        run: |
+         echo "====================="
+         echo " List of Files after cloning"    
+         echo "=====================" 
+         ls - la
+      - name: print Working directory
+        run: |       
+         echo "====================="
+         pwd
