@@ -1,0 +1,15 @@
+name : List of file availability
+on:
+ workflow_dispatch
+jobs:
+  list-of-files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Location
+      run: |
+        echo "Current working directory"
+        pwd
+    - name: files list
+      run: |
+        echo "List of files in the repo are"
+        ls -R
