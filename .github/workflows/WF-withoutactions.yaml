@@ -7,10 +7,10 @@ jobs:
       steps:
       - name: Manually Cloning the repo
         run: |
-         echo "cloning the rep"
-         git clone https://github.com/${{ github.repository }}.git .
-         echo " List of Files after cloning"    
+         echo "cloning the repo"
+         git clone https://github.com/${{ github.repository}}.git .
+         echo "List of Files after cloning"    
          echo "=====================" 
-         ls - la
+         ls -la
          echo "====================="
          pwd
