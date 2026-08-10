@@ -13,3 +13,7 @@ jobs:
       run: |
         echo "List of files in the repo are"
         ls -R
+    - name: Print Repo Name
+      run: |
+        echo " Repo Name is : https://github.com/${{ github.reository }}.git"
+      
