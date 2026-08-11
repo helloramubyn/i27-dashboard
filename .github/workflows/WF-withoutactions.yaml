@@ -1,29 +1,36 @@
-name: Without Actions 
-on: 
-  workflow_dispatch
+name: Without-Actions
+
+on:
+  workflow_dispatch:
+
 jobs:
-   manual-setup:
-      runs-on: ubuntu-latest  
-      steps:
-      - name: Manually Cloning the repo
+  manual-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Manually clone the repository
         run: |
-         echo "cloning the repo"
-         git clone https://github.com/${{ github.repository}}.git .
-         echo "List of Files after cloning"    
-         echo "=====================" 
-         ls -la
-         echo "====================="
-         pwd
-      - name: Verify Default java Package
+          git clone https://github.com/${{ github.repository }}.git .
+          git checkout ${{ github.sha }}
+          echo "Repository cloned successfully"
+          ls -la
+
+      - name: Manually install Java 21
         run: |
-         echo "Validating Java version"
-         java -version  
-      - name: Installing manually Java 21 version
+          echo "Downloading Java 21..."
+          wget -q https://download.java.net/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_linux-x64_bin.tar.gz
+          echo "Extracting Java..."
+          tar -xzf openjdk-21.0.2_linux-x64_bin.tar.gz
+          echo "Setting up JAVA_HOME..."
+          export JAVA_HOME=$PWD/jdk-21.0.2
+          export PATH=$JAVA_HOME/bin:$PATH
+          echo "JAVA_HOME=$PWD/jdk-21.0.2" >> $GITHUB_ENV
+          echo "$PWD/jdk-21.0.2/bin" >> $GITHUB_PATH
+          echo "Java installed successfully"
+
+      - name: Verify Java installation
         run: |
-         echo "Installing Java 21 version by downloading tar.gz file"
-         wget -q https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz
-         tar -xzf openjdk-17.0.2_linux-x64_bin.tar.gz
-         export JAVA_HOME=/opt/jdk-17
-         export PATH=$PATH:$JAVA_HOME/bin
-         export M2_HOME=/opt/apache-maven-3.8.8
-         export PATH=$PATH:$M2_HOME/bin
+          java -version
+          echo "JAVA_HOME: $JAVA_HOME"
+
+      - name: Build the project
+        run: mvn package -DskipTests
